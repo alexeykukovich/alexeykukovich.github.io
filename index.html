@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alexey Kukovich · Artocon</title>
+<meta name="description" content="SAP × AI — I help companies put AI agents to work inside SAP and enterprise processes.">
+<meta property="og:title" content="Alexey Kukovich · Founder &amp; CEO, Artocon">
+<meta property="og:description" content="SAP × AI — I help companies put AI agents to work inside SAP and enterprise processes.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://alexeykukovich.github.io/">
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1115" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF7; --surface: #FFFFFF; --ink: #0F1115; --ink-2: #3A3F47; --ink-3: #62686F;
+    --line: #E5E2DA; --accent: #B8442B; --accent-ink: #94351F; --accent-soft: #F5DCD3; --on-accent: #FFFFFF;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F1115; --surface: #171A1F; --ink: #F2F0EA; --ink-2: #C9CBCF; --ink-3: #9AA0A7;
+      --line: #2A2E35; --accent: #D9603F; --accent-ink: #E8826A; --accent-soft: #3A211A; --on-accent: #0F1115;
+    }
+    .wm-light { display: none; }
+    .wm-dark { display: block !important; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--sans);
+    font-size: 16px; line-height: 1.55; min-height: 100vh;
+    padding: max(20px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+  }
+  .card { max-width: 440px; margin: 0 auto; }
+  header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; }
+  header img { height: 18px; width: auto; }
+  .wm-dark { display: none; }
+  .mono { font-family: var(--mono); font-size: 12px; letter-spacing: .10em; text-transform: uppercase; font-weight: 500; }
+  .event { color: var(--ink-3); }
+
+  .hero { display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: end; margin-bottom: 22px; }
+  .photo { width: 96px; height: 96px; object-fit: cover; display: block; border-radius: 50%; background: var(--line); }
+  .initials { width: 96px; height: 96px; border-radius: 50%; background: var(--accent); color: var(--on-accent);
+    display: grid; place-items: center; font-family: var(--serif); font-size: 40px; font-weight: 600; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: 36px; line-height: 1.02; letter-spacing: -.02em; }
+  .role { color: var(--accent-ink); margin-top: 10px; }
+
+  .pitch { font-size: 18px; line-height: 1.45; color: var(--ink-2); margin-bottom: 16px; }
+  .pitch b { color: var(--ink); font-weight: 600; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .tag { border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 13px; color: var(--ink-2); background: var(--surface); }
+  .loc { color: var(--ink-3); font-size: 14px; margin-bottom: 28px; }
+
+  .btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px;
+    padding: 0 18px; font: 600 16px/1 var(--sans); text-decoration: none; border: 1px solid var(--line);
+    background: var(--surface); color: var(--ink); transition: background-color .12s, border-color .12s; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  @media (hover: hover) { .btn:hover { border-color: var(--ink-3); } .btn.primary:hover { background: var(--accent-ink); } }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-size: 17px; min-height: 58px; margin-bottom: 10px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+  .grid .btn:only-child, .grid .btn:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .site { display: block; text-align: center; color: var(--ink-3); font-size: 14px; padding: 10px 0 0; text-decoration: none; }
+  .site:hover { color: var(--accent-ink); }
+
+  .swap { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .swap h2 { font-family: var(--serif); font-weight: 600; font-size: 22px; letter-spacing: -.01em; margin-bottom: 6px; }
+  .swap p { color: var(--ink-2); font-size: 15px; margin-bottom: 14px; }
+
+  footer { margin-top: 40px; display: flex; gap: 10px; align-items: center; color: var(--ink-3); font-size: 13px; }
+  footer .dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex: none; }
+</style>
+</head>
+<body>
+<main class="card">
+  <header>
+    <img class="wm-light" src="assets/wordmark-ink.png" alt="artocon">
+    <img class="wm-dark" src="assets/wordmark-paper.png" alt="artocon">
+    <span class="mono event">Wave by Vento · Turin 2026</span>
+  </header>
+
+  <section class="hero">
+    <img class="photo" src="assets/photo.jpg" alt="Alexey Kukovich" width="96" height="96">
+    <div>
+      <h1>Alexey<br>Kukovich</h1>
+      <div class="mono role">Founder &amp; CEO · Artocon</div>
+    </div>
+  </section>
+
+  <p class="pitch"><b>SAP × AI.</b> I help companies put AI agents to work inside SAP and enterprise processes.</p>
+  <div class="tags"><span class="tag">SAP consulting</span><span class="tag">AI agents</span><span class="tag">Process automation</span></div>
+  <div class="loc">Gdańsk, Poland</div>
+
+  <a class="btn primary" href="alexey-kukovich.vcf" download>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+    Save my contact
+  </a>
+  <div class="grid"><a class="btn" href="https://www.linkedin.com/in/alexey-kukovich-2514a8b/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v15h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.1c0-1.7-.03-3.88-2.36-3.88-2.36 0-2.72 1.84-2.72 3.75V23H8V8z"/></svg>LinkedIn</a><a class="btn" href="https://wa.me/48606539670" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path fill="currentColor" d="M9.2 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.3 0 .6.5.9 1.5 1.9 2.5 2.4.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.4.4 0 .8-.6 1.6-1.5 1.8-.7.2-1.6.2-3.6-.8-2.3-1.2-3.8-3.6-3.9-3.8-.2-.2-1-1.3-1-2.5s.6-1.8.8-2.1z"/></svg>WhatsApp</a><a class="btn" href="mailto:alexey.kukovich@artocons.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Email</a></div>
+  <a class="site" href="https://artocons.com" target="_blank" rel="noopener">artocons.com →</a>
+
+  <section class="swap"><h2>Let’s swap contacts</h2><p>Send me yours — a pre-filled message opens, just add your name and company.</p><div class="grid"><a class="btn" href="https://wa.me/48606539670?text=Hi%20Alexey%21%20We%20met%20at%20Wave%20by%20Vento.%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Bcompany%5D.%0AMy%20contacts%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path fill="currentColor" d="M9.2 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.3 0 .6.5.9 1.5 1.9 2.5 2.4.3.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.2.4.4 0 .8-.6 1.6-1.5 1.8-.7.2-1.6.2-3.6-.8-2.3-1.2-3.8-3.6-3.9-3.8-.2-.2-1-1.3-1-2.5s.6-1.8.8-2.1z"/></svg>Via WhatsApp</a><a class="btn" href="mailto:alexey.kukovich@artocons.com?subject=Wave%20by%20Vento%20%E2%80%94%20let%27s%20keep%20in%20touch&amp;body=Hi%20Alexey%21%20We%20met%20at%20Wave%20by%20Vento.%0AI%27m%20%5Bname%5D%2C%20%5Brole%5D%20at%20%5Bcompany%5D.%0AMy%20contacts%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg>Via email</a><a class="btn" href="https://www.linkedin.com/in/alexey-kukovich-2514a8b/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v15h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.1c0-1.7-.03-3.88-2.36-3.88-2.36 0-2.72 1.84-2.72 3.75V23H8V8z"/></svg>Connect on LinkedIn</a></div></section>
+
+  <footer><span class="dot"></span>This card was built by my AI agent — the same way we build for clients.</footer>
+</main>
+</body>
+</html>
